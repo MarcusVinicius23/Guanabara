@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Laptop do Batman</h1>
+        <p>O Batman (inicialmente chamado o Bat-Man) também conhecido pelas alcunhas Homem-Morcego, Cavaleiro das Trevas, Cruzado Encapuzado, Maior Detetive do Mundo, é um personagem fictício e super-herói encapuçado da editora norte-americana DC Comics. Essa poderosa máquina feita pela Wayne Enterprises está disponivel para você por preços acessíveis.</p>
+        <img src="60126_1.jpg" alt="sua máquina" class="direita">
+        <h2>Configurações:</h2>
+        <ul>
+            <li>Intel Core i7-12800H</li>
+            <li>GeForce RTX 3070</li>
+            <li>Tela de 7 poleguadas 144hz</li>
+        </ul>
+        <br>
+        <img src="39a19162d0f99fa2a859290e545b43a6.webp" alt="box" class="left">
+        <h2>Vantagens:</h2>
+        <ul>
+            <li>Gráficos atualizados.</li>
+            <li>Jogos já instalados.</li>
+            <li>Windows Vista vem istalado.</li>
+        </ul>
+        <br>
+        
+    </main>
+    <section id="opt">
+       <form action="lol.php" method="get" onsubmit="return calc()">
+            <label for="mem">RAM: </label>
+            <select name="mem" id="mem">
+                <option value="8GB">8GB</option>
+                <option value="16GB">16GB</option>
+                <option value="32GB">32GB</option>
+            </select>
+            <br>
+            <label for="disc">ARMAZENAMENTO:</label>
+            <select name="disc" id="disc">
+                <option value="HD 1TB">HD 1TB</option>
+                <option value="SSD 256GB">SSD 256GB</option>
+                <option value="SSD 512GB">SSD 512GB</option>
+            </select>
+            <br>
+            <input type="submit" value="Calcular">
+        </form>
+    </section> 
+
+    <section id="lol">
+        <h2>Preço Final</h2>
+        <p id="resp">
+            lol
+        </p>
+    </section>
+    
+    <script>
+        lol.style.visibility = 'hidden'
+        function calc() {
+            let tot = 6200
+            
+            if (mem.value == '8GB') {
+                tot += 150
+            } else if (mem.value == '16GB') {
+                tot += 300
+            } else if (mem.value == '32GB') {
+                tot += 600
+            }
+
+            if (disc.value == 'HD 1TB') {
+                tot += 200
+            } else if (disc.value == 'SSD 256GB') {
+                tot += 500
+            } else if (disc.value == 'SSD 512GB') {
+                tot += 700
+            }
+
+            resp.innerHTML = `Seu computador com ${mem.value} e ${disc.value} são: ${tot}`
+            lol.style.visibility = 'visible'
+            
+            return false
+        }
+
+    </script>
+</body>
+</html>

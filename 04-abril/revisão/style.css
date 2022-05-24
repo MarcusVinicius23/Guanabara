@@ -1,0 +1,37 @@
+body {
+    background-image: url(wallpapersden.com_bat-signal-batman-4k-dc_3840x2015.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+main, section {
+    background-color: rgba(0, 0, 0, 0.788);
+    max-width: 500px;
+    padding: 20px;
+    margin: 10px auto;
+    color: aliceblue;
+    border-radius: 10px;
+}
+
+main>h1 {
+    text-align: center;
+}
+
+main>img {
+    border: 5px solid rgb(117, 0, 0);
+}
+
+img.direita {
+    display: block;
+    float: right;
+    width: 200px;
+}
+
+img.left {
+    display: block;
+    float: left;
+    width: 150px;
+    margin-right: 20px;
+}

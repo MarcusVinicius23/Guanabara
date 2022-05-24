@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>PAYDAY™ The Heist</h1>
+        <p> In PAYDAY™ The Heist, players use a variety of firearms to complete objectives. The game plays from the first person perspective, but offers a few twists on the standard FPS formula. Killing civilians is punished, instead players may take a limited number as hostages. Should any player get arrested during the heist, one of their teammates may release a hostage, allowing a trade to take place which allows a single player to be released.
+            <br> <br>
+            <img src="capsule_616x353.jpg" alt="the crew" class="crew"> 
+            <br> <br>
+         The game focuses on four robbers (Dallas, Hoxton, Chains, and Wolf) who team up. Their first heist took place at the First World Bank, where they entered a vault by using thermite hidden on the inside of a photocopier and stole a large amount of money. A post-game message congratulates the group, telling them that they are "set for life", but recommends more heists, including robbing drug junkies in an abandoned apartment complex and ambushing a prisoner transport in heavy rain weather, simply for the enjoyment of the players.</p>
+        
+        <form action="lol.php" method="get" onsubmit="return promo()">
+            <h3>Buy PAYDAY™ The Heist on Steam today!</h3>
+            <br>
+            <input type="submit" value="Buy PAYDAY™ The Heist">
+
+        </form>
+        
+
+    </main>
+    
+    
+    <section id="dlc">
+        <p id="this">Why not buy The Wolf Pack DLC?</p>
+        <h2>The Wolf Pack DLC</h2>
+        <p>PAYDAY™ The Heist Wolfpack is the much anticipated, first DLC pack for this action filled FPS that lets players take on the role of hardened career criminals in constant pursuit of the next 'big score'. Load out with an array of brand new weaponry including the new pistol, automatic rifle, or the grenade launcher which can kill many enemies in one blow, as you execute two intense new heists and 48 new levels.</p>
+        <br>
+        <img src="900bd032caa463a3_org.jpg" alt="wolf" class="wolf">
+        <ul>Key Features:</ul>
+        <li>New Handgun: The STRYK, Full Auto Pistol</li>
+        <li>New Primary Weapon: The AK, Automatic Rifle</li>
+        <li>New Secondary Weapon: The GL40, Grenade Launcher</li>
+        <li>New Deployable Equipment: The Sentry gun - based on internet blueprints</li>
+        <li>2 New Heists: Undercover (transfer money to your account from the IRS) and Counterfeit (secret operation in the Sunshine State)</li>
+        <li>New Skilltree: Raise your level cap to 193 with the new Technician Specialty</li>
+        <li>2 New Player Upgrades: The Tool Kit - so you can interact faster</li>
+        <li>Hosting Ability: Invite friends to play in the new DLC maps even if they do not own the DLC themselves</li>
+        <br> <br>
+            <form action="lol.php" method="get" onclick="return cart()">
+                <label for="buy">Do you want to add the Wolf Pack DLC to your cart?</label>
+                <select name="buy" id="buy">
+                    <option value="ye">Yes</option>
+                    <option value="no" selected>No</option>
+                </select>
+            </form>
+        </section>
+        
+        <section id="carro">
+            <h3>Your purchase is ready!</h3>
+            <ul id="bruh">
+                <li>PAYDAY™ The Heist = $20</li>
+            </ul>
+            <form action="lol.php" method="get" onsubmit="return compra()">
+                <input type="submit" value="Buy" id="botao">
+                <label for="botao" id="done">Done!</label>
+            </form>
+        </section>
+        
+        <script>
+            dlc.style.visibility = 'hidden'
+            carro.style.visibility = 'hidden'
+            done.style.visibility = 'hidden'
+            function promo() {
+                dlc.style.visibility = 'visible'
+                return false
+            }
+
+            function cart() {
+                if (buy.value == 'no') {
+                    carro.style.visibility = 'visible'
+                    bruh.innerHTML =  `<li>PAYDAY™ The Heist = $20</li>`
+                    done.style.visibility = 'hidden'
+                } else {
+                    bruh.innerHTML = `<li>PAYDAY™ The Heist = $20</li> <li>The Wolf Pack DLC = $4.99</li>`
+                    done.style.visibility = 'hidden'
+                }
+
+                return false
+            }
+
+            function compra() {
+                done.style.visibility = 'visible'
+                return false
+            }
+
+        </script>
+</body>
+</html>

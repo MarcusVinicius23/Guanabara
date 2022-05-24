@@ -1,0 +1,62 @@
+body {
+    background-image: url(wp1843579-payday-the-heist-wallpapers.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+main {
+    background-color: rgba(209, 202, 202, 0.411);
+    max-width: 600px;
+    margin: auto;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+main>h1 {
+    text-align: center;
+}
+
+section {
+    background-color: rgba(209, 202, 202, 0.411);
+    max-width: 600px;
+    margin: auto;
+    padding: 10px;
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+section>h2 {
+    text-align: center;
+}
+
+img.crew {
+    width: 500px;
+    margin-left: 50px;
+    border: 3px solid black;
+}
+
+img.wolf {
+    width: 200px;
+    float: right;
+}
+
+section>ul {
+    font-size: larger;
+}
+
+p#this {
+    color: rgb(29, 2, 2);
+    font-size: larger;
+}
+
+input#button {
+    text-align: center;
+}
+
+label#done {
+    color: rgb(3, 182, 3);
+}
