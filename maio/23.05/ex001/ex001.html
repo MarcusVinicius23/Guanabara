@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Lista Dinâmica</h1>
+        <p>Escolha o tipo de conteúdo que vai aparecer na lista:</p>
+        <p>
+            <form action="lol.php" method="get" onsubmit="return especial()">
+                <label for="tipo">Que dados vamos mostrar?</label>
+                <br>
+                <select name="tipo" id="tipo">
+                    <option value="opc1">Tabuada de um número</option>
+                    <option value="opc2">Múltiplos de 1 a 100</option>
+                </select>
+            </p>
+            
+            <p>
+                <label for="num">Qual será o número?</label>
+                <input type="number" name="num" id="num">
+                <input type="submit" value="Preencher">
+            </p>
+            
+            <p>
+                <label for="lista">Listagem com resultado</label>
+                <br>
+                <select name="lista" id="lista" size="10">
+                    
+                </select>
+            </p>
+            </form>
+    </main>
+    <a href="index.html">Go Back</a> <!--ou <a href="javascript:history.go(-1)">Go Back</a>-->
+
+    <script>
+        function especial() {
+            
+            let n = Number(num.value)
+            //esvaziar a lista
+            lista.innerHTML = null
+            
+            if (tipo.value == 'opc1') {
+                let c = 1
+                while (c<=10) {
+                    let item = document.createElement('option')
+                    item.innerHTML = `${n} x ${c} = ${n*c}`
+                    lista.add(item)
+                    c++
+                }   
+            } else if (tipo.value == 'opc2') {
+                let c = 0
+                while (c<=100) {
+                    if (c%n == 0) {
+                        let item = document.createElement('option')
+                        item.innerHTML = `${c} é divisivel por ${n}.`
+                        lista.add(item)
+                    }
+                    c++
+                }
+            }
+            return false
+        }
+    </script>
+</body>
+</html>
