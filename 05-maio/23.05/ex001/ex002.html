@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: darkslategray;
+        }
+        
+        main {
+            background-color: rgb(156, 162, 167);
+            padding: 10px;
+            max-width: 400px;
+            margin: auto;
+            margin-top: 200px;
+            border-radius: 20px;
+            box-shadow: 20px 20px 5px rgba(0, 0, 0, 0.603);
+        }
+
+        a {
+            color: yellowgreen;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: rgb(75, 100, 26);
+        }
+
+        a:hover {
+            color: rgb(136, 41, 4);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Números Primos</h1>
+        <form action="lol.php" method="get" onsubmit="return calc()">
+            <label for="num">Digite um número: </label>
+            <input type="number" name="num" id="num">
+            <input type="submit" value="Go!">
+        </form>
+
+        <p id="resp"></p>
+
+        <a href="index.html">Go Back</a>
+    </main>
+
+    <script>
+        function calc() {
+            resp.innerHTML = null
+            let n = Number(num.value)
+            let c = 1
+            let rest = 0
+            while (c <= n) {
+                if (n%c == 0) {
+                    rest ++
+                }
+                c++
+            }
+            if (rest == 2) {
+                resp.innerHTML = `${n} é primo!`
+            } else {
+                resp.innerHTML = `${n} <strong>não</strong> é primo!`
+            }
+            return false
+        }
+    </script>
+</body>
+</html>
