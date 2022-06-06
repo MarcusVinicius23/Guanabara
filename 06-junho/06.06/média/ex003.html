@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1>Média Salárial</h1>
+        <button onclick="return calc()">Go!</button>
+        <p id="resp"></p>
+        <a href="javascript:history.go(-1)">Go Back</a>
+    </main>
+
+    <script>
+        function calc() {
+            let c = 1
+            let n = 0
+            let s = 0
+            let money = 0
+            let qnt = 0
+            while (c <= 3) {
+                let name = prompt('Digite seu nome: ')
+                n = Number(prompt('Digite sua idade: '))
+                money = Number(prompt('Digite seu salário: '))
+                if (n >= 50) {
+                    s = s + money
+                    qnt ++
+                }
+
+                resp.innerHTML += `${name}, ${n} anos:R$${money},00 <br>`
+
+                c++
+            }
+
+            m = s / qnt
+            resp.innerHTML += `<br> A média dos salários de nossos trabalhadores mais velhos é ${m.toFixed(1)}.`
+
+            return false
+        }
+    </script>
+</body>
+</html>

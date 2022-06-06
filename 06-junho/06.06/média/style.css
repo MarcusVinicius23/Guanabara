@@ -1,0 +1,17 @@
+body {
+    background-color: steelblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+    max-width: 600px;
+    background-color: aliceblue;
+    margin: auto;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+a {
+    color: seagreen;
+    text-decoration: none;
+}
